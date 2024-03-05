@@ -47,7 +47,7 @@ static char			*ft_putnbr_base(int nbr, int len, char *base_to, int lenb)
 	len = (nbr < 0) ? len + 1 : len;
 	if (!(r = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	r[0] = (nbr < 0) ? '-' : r[0];
+	r[0] = (nbr < 0) ? '-' : '\0';
 	nbr = (nbr < 0) ? nbr * -1 : nbr;
 	if (nbr == 0)
 	{
